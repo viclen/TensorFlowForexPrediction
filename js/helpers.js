@@ -10,7 +10,7 @@ const processData = function (data, timePortion) {
 
         let features = [];
         for (let i = 0; i < size; i++) {
-            features.push(data[i]['close']);
+            features.push(data[i]['value']);
         }
 
         // Scale the values
@@ -118,6 +118,12 @@ const getMax = function (data) {
 Date.prototype.addDays = function(days) {
     var date = new Date(this.valueOf());
     date.setDate(date.getDate() + days);
+    return date;
+}
+
+Date.prototype.addMinutes = function(minutes) {
+    var date = new Date(this.valueOf());
+    date.setMinutes(date.getMinutes() + minutes);
     return date;
 }
 
