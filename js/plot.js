@@ -52,6 +52,11 @@ const plotData = function (data1, data2, label = null) {
                         labelString: 'Stock Value'
                     }
                 }]
+            },
+            elements: {
+                point: {
+                    radius: 0
+                }
             }
         }
     };

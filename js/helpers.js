@@ -148,3 +148,35 @@ const clearPrint = function () {
     let el = document.getElementsByClassName('cnn')[0];
     el.innerHTML = "";
 }
+
+/*
+    Stopwatch
+*/
+var timeStarted = new Date();
+var running = false;
+
+const startStopWatch = function() {
+    timeStarted = new Date();
+
+    running = true;
+
+    showStopWatch();
+}
+
+const showStopWatch = function() {
+    let current = new Date() - timeStarted;
+    let mins = 0;
+    
+    if(current / 1000 > 60){
+        mins = Math.trunc(current / 60000);
+    }
+
+    $("#stopwatch").html(mins + " minutos e " + ((current - (mins * 60000)) / 1000) + " segundos");
+
+    if(running)
+        setTimeout(() => showStopWatch(), 1000);
+}
+
+const stopStopWatch = function() {
+    running = false;
+}

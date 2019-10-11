@@ -14,9 +14,6 @@ if (!localStorage.getItem("data")) {
     fetch(url)
         .then(r => r.json())
         .then(data => {
-            // for(var rate in data.rates){
-            //     console.log(data.rates[rate].CAD);
-            // }
             localStorage.setItem("data", JSON.stringify(data));
         });
 }else{

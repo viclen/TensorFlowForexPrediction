@@ -1,6 +1,6 @@
 <?php
 
-$xls = file_get_contents("USDCAD_M1_201909.csv");
+$xls = file_get_contents("HistoricalData.csv");
 
 $rows = explode(PHP_EOL, $xls);
 
