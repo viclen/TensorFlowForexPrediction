@@ -12,7 +12,7 @@ const buildCnn = function (data) {
 
         // Define input layer
         model.add(tf.layers.inputLayer({
-            inputShape: [10, 1],
+            inputShape: [timePortion, 1],
         }));
 
         // Add the first convolutional layer
@@ -49,7 +49,7 @@ const buildCnn = function (data) {
 
         // Add Flatten layer, reshape input to (number of samples, number of features)
         model.add(tf.layers.flatten({
-
+            
         }));
 
         // Add Dense layer, 
