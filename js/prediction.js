@@ -1,3 +1,6 @@
+let epochs = 100;
+let timePortion = 10;
+
 /*
     Build Convolutional Neural Network using Tensorflow.js
 */
@@ -9,7 +12,7 @@ const buildCnn = function (data) {
 
         // Define input layer
         model.add(tf.layers.inputLayer({
-            inputShape: [15, 1],
+            inputShape: [10, 1],
         }));
 
         // Add the first convolutional layer
@@ -88,9 +91,6 @@ const cnn = function (model, data, epochs) {
         }
     });
 }
-
-let epochs = 100;
-let timePortion = 15;
 
 $(document).ready(function () {
 
